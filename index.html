@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="md5.js" defer></script>
+    <title>MD5</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		html, body {
+			font-family: Verdana;
+			font-size: 13px;
+			width: 100%;
+		}
+	</style>
+  </head>
+  <body>
+	<p>Введите текст</p>
+	<input id="md5_input-p" type="text" placeholder="текст" value="md5">
+	<button id="calc_md5-btn">Вычислить контрольную сумму md5 для строки</button>
+	<p id="md5_output-p"></p>
+  </body>
+  <script>
+	document.getElementById('calc_md5-btn').onclick = function () {
+		document.getElementById('md5_output-p').textContent = md5(document.getElementById('md5_input-p').value);
+	}
+  </script>
+</html>
